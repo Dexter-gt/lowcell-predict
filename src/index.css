@@ -1,0 +1,18 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+@layer base{
+:root,[data-theme=dark]{--bg:9 9 11;--surface:16 16 20;--raised:23 23 29;--line:34 34 42;--ink:244 244 246;--mute:139 139 151;--fg:255 255 255;--accent:112 71 255;--blue:19 127 250;--orange:255 107 44;--up:47 214 133;--down:255 61 90;color-scheme:dark}
+[data-theme=light]{--bg:246 246 247;--surface:255 255 255;--raised:240 240 244;--line:226 226 234;--ink:15 15 20;--mute:100 100 116;--fg:0 0 0;--accent:112 71 255;--blue:19 127 250;--orange:214 80 16;--up:12 148 86;--down:212 28 58;color-scheme:light}}
+button:focus-visible,a:focus-visible,select:focus-visible,[role=tab]:focus-visible{outline:2px solid rgb(var(--accent));outline-offset:2px}
+body{transition:background-color .25s,color .25s}body{@apply bg-bg text-ink font-sans antialiased}
+@keyframes draw{to{stroke-dashoffset:0}}@keyframes rise{from{opacity:0;transform:translateY(8px)}}
+@keyframes grow{from{transform:scaleY(0)}}@keyframes shimmer{to{background-position:-200% 0}}
+.draw{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.1s cubic-bezier(.2,.7,.2,1) forwards}
+.rise{animation:rise .5s cubic-bezier(.2,.7,.2,1) backwards}
+.grow{transform-origin:bottom;animation:grow .6s cubic-bezier(.2,.7,.2,1) both}
+.skel{background:linear-gradient(90deg,rgb(var(--raised)) 25%,rgb(var(--line)) 50%,rgb(var(--raised)) 75%);background-size:200% 100%;animation:shimmer 1.2s infinite;border-radius:10px}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+*{scrollbar-width:thin;scrollbar-color:rgb(var(--line)) transparent}
+::-webkit-scrollbar{width:8px;height:8px}::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:rgb(var(--line));border-radius:8px}::-webkit-scrollbar-thumb:hover{background:rgb(var(--mute))}
+.no-scrollbar{scrollbar-width:none}.no-scrollbar::-webkit-scrollbar{display:none}
