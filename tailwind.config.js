@@ -1,3 +1,0 @@
-export default {content:['./index.html','./src/**/*.{ts,tsx}'],theme:{extend:{
-colors:{bg:'rgb(var(--bg) / <alpha-value>)',surface:'rgb(var(--surface) / <alpha-value>)',raised:'rgb(var(--raised) / <alpha-value>)',line:'rgb(var(--line) / <alpha-value>)',ink:'rgb(var(--ink) / <alpha-value>)',mute:'rgb(var(--mute) / <alpha-value>)',fg:'rgb(var(--fg) / <alpha-value>)',accent:'rgb(var(--accent) / <alpha-value>)',blue:'rgb(var(--blue) / <alpha-value>)',orange:'rgb(var(--orange) / <alpha-value>)',up:'rgb(var(--up) / <alpha-value>)',down:'rgb(var(--down) / <alpha-value>)'},
-fontFamily:{sans:['"Figtree Variable"','system-ui','sans-serif'],mono:['"JetBrains Mono Variable"','ui-monospace','monospace']}}}}
